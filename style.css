@@ -1,3 +1,66 @@
-body {
-color: darkgrey;
+*{
+    margin-top: 0;
+}
+
+.container {
+    background: blue;
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 10fr;
+    grid-template-areas: 
+    'a a a'
+    'b c c';
+}
+  
+.a {
+    grid-area: a;
+    background: lightblue;
+}
+
+.item{
+    text-align: center;
+    font-style: oblique;
+}
+  
+.b {
+    grid-area: b;
+    background: lightblue;
+    font-size: 30px; 
+}
+
+ol{
+    list-style-type:square;
+  
+}
+
+ol > li {
+    float:center;
+}
+
+ol a {
+    display:block;
+    color:#000;
+    text-decoration:none;
+    padding:0 5px;
+    font-style: italic;
+    
+}
+  
+ol > li:hover > ul {
+    display:block;
+    line-height: 2;
+}
+
+.c {
+    grid-area: c;
+    background: lightblue;
+    text-align: center;
+}
+
+img{
+    height: 300px;
+    width: 500px;
+    margin:10px;
 }

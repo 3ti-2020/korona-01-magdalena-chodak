@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="dane.css">
+    <link rel="stylesheet" href="dane_tab.css">
 </head>
 <body>
+    <div class="container">
     <!-- Seriale z gatunku komedia -->
 <?php
 $servername="127.0.0.1";
@@ -66,5 +67,35 @@ while($row=$result->fetch_assoc() ){
 }
 echo("</table>");
 ?>
+<!-- Pierwsze filmy -->
+<?php
+$servername="127.0.0.1";
+$username="root";
+$password="";
+$dbname="chodak";
+
+$conn=new mysqli($servername,$username,$password,$dbname);
+
+echo("<table class='tab'>");
+$result=$conn->query("SELECT * FROM filmy");
+echo("<tr>
+<th>ID</th>
+<th>Gatunek</th>
+<th>Tytul</th>
+<th>Rok</th>
+</tr>");
+while($row=$result->fetch_assoc() ){
+    echo("<tr>");
+    echo("
+    <td>".$row['FilmyID']."</td>
+    <td>".$row['Gatunek']."</td>
+    <td>".$row['TytulFilm']."</td>
+    <td>".$row['Rok']."</td>
+     ");
+    echo("</tr>");
+}
+echo("</table>");
+?>
+</div>
 </body>
 </html>

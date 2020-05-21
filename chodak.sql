@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 19 Maj 2020, 13:41
+-- Czas generowania: 21 Maj 2020, 13:15
 -- Wersja serwera: 10.1.37-MariaDB
 -- Wersja PHP: 7.2.12
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `chodak`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `filmy`
+--
+
+CREATE TABLE `filmy` (
+  `FilmyID` int(2) NOT NULL,
+  `Gatunek` text NOT NULL,
+  `TytulFilm` text NOT NULL,
+  `Rok` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `filmy`
+--
+
+INSERT INTO `filmy` (`FilmyID`, `Gatunek`, `TytulFilm`, `Rok`) VALUES
+(1, 'Fantasy', '\"Zakleta Gospoda\"', 1896),
+(2, 'Komedia', '\"Polewacz polany\"', 1895);
 
 -- --------------------------------------------------------
 
@@ -71,6 +92,12 @@ INSERT INTO `serialekomedia` (`KomediaID`, `KomediaTytul`, `KomediaSezon`, `Kome
 --
 
 --
+-- Indeksy dla tabeli `filmy`
+--
+ALTER TABLE `filmy`
+  ADD KEY `FilmyID` (`FilmyID`);
+
+--
 -- Indeksy dla tabeli `serialefantasy`
 --
 ALTER TABLE `serialefantasy`
@@ -85,6 +112,12 @@ ALTER TABLE `serialekomedia`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT dla tabeli `filmy`
+--
+ALTER TABLE `filmy`
+  MODIFY `FilmyID` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `serialefantasy`

@@ -9,8 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="a item">
-            <h1>Magdalena Chodak</h1>
+        <div class="a item" >
+
+        <div id="btn">Magdalena Chodak</div>
+    
         </div>
         <div class="b">
             <ol>
@@ -66,6 +68,7 @@ echo("</table>");
         </div>
        
     </div>
-</body>
 <script src="script.js"></script>
+
+</body>
 </html>

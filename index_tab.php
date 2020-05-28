@@ -10,6 +10,12 @@
 <body>
     <div class="container">
     <div class="tab1">
+    <div class="del">
+        <form action="del.php" method="POST">
+                <input type="text" name="id_to_delete">
+                <input type="submit" value="delete">
+            </form>
+            </div>
 <?php
 $servername="127.0.0.1";
 $username="root";
@@ -36,8 +42,8 @@ while($row=$result->fetch_assoc() ){
 }
 echo("</table>");
 ?>
-</div>
-<div class="tab2">
+
+
 <?php
 $servername="127.0.0.1";
 $username="root";
@@ -65,7 +71,25 @@ while($row=$result->fetch_assoc() ){
 echo("</table>");
 ?>
 </div>
-<div class="tab3">
+
+
+    <div class="ins">
+            <form action="ins.php" method="POST">
+            
+            <!-- <li><input type="text" class="none" name="id_autor"></li> -->
+
+            <li>IMIE</li>
+            <li><input type="text" name="imie"></li>
+            <li>NAZWISKO</li>
+            <li><input type="text" name="nazwisko"></li>
+            
+
+
+            <input type="submit" value="insert">
+            
+            </form>
+        </div>
+<div class="tab2">
 <?php
 $servername="127.0.0.1";
 $username="root";

@@ -2,3 +2,37 @@
     border:solid black 1px;
 }
 
+*{
+    margin-top: 0;
+}
+
+.container {
+    background: blue;
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 10fr;
+    grid-template-areas: 
+    'c c c c'
+    'd d b b ';
+}
+
+.ins{
+    background: lightsalmon;
+    grid-area:b;
+}
+
+.none{
+    display: none;
+}
+
+.tab1{
+    background: lightblue;
+    grid-area: c;
+}
+.tab2{
+    background: lightblue;
+
+    grid-area: d;
+}
